@@ -46,3 +46,16 @@ const alien = {
 for(let key in alien){
     console.log(key, alien[key]);
 }
+
+
+//Iteracion#5
+//Usa un bucle for para recorrer todos los destinos del array y elimina los elementos que tengan el id 11 y 40. Imprime en un console log el array
+const placesToTravel1 = [{id: 5, name: 'Japan'}, {id: 11, name: 'Venecia'}, {id: 23, name: 'Murcia'}, {id: 40, name: 'Santander'}, {id: 44, name: 'Filipinas'}, {id: 59, name: 'Madagascar'}]
+
+for(let i = 0; i < placesToTravel1.length; i++){
+    if( placesToTravel1[i].id === 11 || placesToTravel1[i].id === 40){
+        placesToTravel1.splice(i, 1); 
+        i--; //Si se modifica una array durante un loop hay que reajustar el indice porque la longitus ha cambiado
+    }
+}
+console.log(placesToTravel1);
